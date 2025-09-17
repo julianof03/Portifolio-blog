@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css';
-import TopHolder from './components/topHolder.jsx';
+import TopHolder from './components/topHolderFamily/topHolder.jsx';
 
 function App() {
   return (
