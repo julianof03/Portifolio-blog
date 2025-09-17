@@ -1,0 +1,14 @@
+.cardHolder {
+    width: 70%;
+    min-height: 20vh;
+    margin-top: 20vh;
+    margin-left: 30vh;
+
+    padding: 20px;
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: space-around;
+    align-items: start;
+}

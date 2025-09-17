@@ -1,8 +1,10 @@
 .topHolder{
     position: absolute;
     top: 0px;
+    left: 0px;
     background-color: rgb(104, 50, 139);
     width: 100%;
+    height: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
