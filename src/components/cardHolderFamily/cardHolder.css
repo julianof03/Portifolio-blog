@@ -12,3 +12,12 @@
     justify-items: space-around;
     align-items: start;
 }
+.Jogos{
+    background-color: rgb(6, 41, 53);
+}
+.Filmes{
+    background-color: rgb(38, 104, 7);
+}
+.Series{
+    background-color: rgb(216, 147, 19);
+}

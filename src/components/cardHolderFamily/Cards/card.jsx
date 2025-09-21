@@ -1,14 +1,19 @@
 import './card.css';
 import React from 'react'
-function Card({setShowPopup}) {
-  const activePopup = () => {
-    setShowPopup(prevState => !prevState);
+function Card({setShowPopup, cardData, setPopUpdata}) {
+  const activePopup = (cardInfo) => {
+    setShowPopup(true);
+    setPopUpdata(cardInfo);
   };
 
   return (
-    <div className='Card' onClick={()=>{activePopup()}}>
-        <p>hello i am a card</p>
-    </div>
+    <>
+      {cardData.map(card => (
+        <div key={card.id} className='Card' onClick={() => activePopup(card)}>
+          <p>{card.content}</p>
+        </div>
+      ))}
+    </>
   )
 }
 

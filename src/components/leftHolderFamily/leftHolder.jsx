@@ -1,10 +1,15 @@
 import './leftHolder.css';
 import React from 'react'
-function LeftHolder() {
+function LeftHolder({setSelectedTheme, setLeftTheme, leftTheme, themeList, selectedTheme}) {
+
+  const swtichThemeFunction = () => {
+    setSelectedTheme(leftTheme);
+    setLeftTheme(selectedTheme);
+  }
 
   return (
-    <div className='LeftHolder'>
-        <p>hello</p>
+    <div className='LeftHolder'  onClick={() => swtichThemeFunction()}>
+        <p>{themeList[leftTheme].themeName}</p>
     </div>
   )
 }

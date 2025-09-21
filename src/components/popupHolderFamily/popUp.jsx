@@ -1,16 +1,14 @@
 import './popUp.css';
 import React from 'react'
-function PopUp({showPopup, setShowPopup}) {
+function PopUp({showPopup, setShowPopup, popUpData}) {
   const closePopup = () => {
-    setShowPopup(prevState => !prevState);
+    setShowPopup(false);
   };
-  
-  if (!showPopup) return null;
   
   return (
     <div className={`popUp ${showPopup ? 'visible' : ''}`}>
         <button onClick={closePopup}>X</button>
-        <p>hello i am a popup</p>
+        <p>{popUpData.content}</p>
     </div>
   );
 }
