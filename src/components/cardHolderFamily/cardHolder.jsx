@@ -3,20 +3,34 @@ import React, { useState } from 'react';
 import Card from './Cards/Card';
 import PopUp from '../popupHolderFamily/popUp';
 
-function CardHolder({ selectedTheme, themeList }) {  // Corrigido aqui com desestruturação
+function CardHolder({ selectedTheme, themeList }) { 
   const [showPopup, setShowPopup] = useState(false);
   const [popUpData, setPopUpdata] = useState([]);
 
   const cardData = [
-    { id: 1, content: 'Card 1 Content' },
-    { id: 2, content: 'Card 2 Content' },
-    { id: 3, content: 'Card 3 Content' },
-    { id: 4, content: 'Card 4 Content' },
+    { 
+      content: [
+        { id: 1, content: 'Eu sou um card de jogos 01' },
+        { id: 2, content: 'Eu sou um card de jogos 02' }
+      ]
+    },
+    { 
+      content: [
+        { id: 1, content: 'Eu sou um card de filmes 01' },
+        { id: 2, content: 'Eu sou um card de filmes 02' }
+      ]
+    },{ 
+      content: [
+        { id: 1, content: 'Eu sou um card de series 01' },
+        { id: 2, content: 'Eu sou um card de series 02' }
+      ]
+    }
   ];
 
   return (
     <div className={`cardHolder ${themeList[selectedTheme].themeName}`}>
       <Card 
+        selectedTheme = {selectedTheme}
         setShowPopup ={setShowPopup}
         setPopUpdata = {setPopUpdata}
         cardData = {cardData}
