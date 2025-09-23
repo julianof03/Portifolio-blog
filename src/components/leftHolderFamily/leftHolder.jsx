@@ -1,14 +1,27 @@
 import './leftHolder.css';
-import React from 'react'
+import React, { useState } from 'react'
 function LeftHolder({setSelectedTheme, setLeftTheme, leftTheme, themeList, selectedTheme}) {
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const swtichThemeFunction = () => {
-    setSelectedTheme(leftTheme);
-    setLeftTheme(selectedTheme);
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    
+    // Muda o texto quando a barra estiver totalmente expandida (0.5s)
+    setTimeout(() => {
+      setSelectedTheme(leftTheme);
+      setLeftTheme(selectedTheme);
+    }, 1000);
+    
+    // Para a animação após 2.5 segundos (duração total)
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 2500);
   }
 
   return (
-    <div className='LeftHolder'  onClick={() => swtichThemeFunction()}>
+    <div className={`LeftHolder ${isAnimating ? 'expanding' : ''}`} onClick={() => swtichThemeFunction()}>
         <p>{themeList[leftTheme].themeName}</p>
     </div>
   )

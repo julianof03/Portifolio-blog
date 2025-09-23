@@ -16,3 +16,23 @@
 .LeftHolder:hover {
     width: 200px;
 }
+
+/* Animação simples de expansão */
+.LeftHolder.expanding {
+    animation: expand 1.5s ease-in-out;
+}
+
+@keyframes expand {
+    0% {
+        width: 80px;
+    }
+    40% {
+        width: 100vw;
+    }
+    60% {
+        width: 100vw;
+    }
+    100% {
+        width: 80px;
+    }
+}
