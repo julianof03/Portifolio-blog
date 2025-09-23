@@ -10,8 +10,20 @@ function CardHolder({ selectedTheme, themeList }) {
   const cardData = [
     { 
       content: [
-        { id: 1, content: 'Eu sou um card de jogos 01' },
-        { id: 2, content: 'Eu sou um card de jogos 02' }
+        { id: 1, content: 'Minecraft', rate: 100 },
+        { id: 2, content: 'Escape from tarkov', rate: 1 },
+        { id: 3, content: 'Rainbow Six X', rate: 85 },
+        { id: 4, content: 'GTA V', rate: 80 },
+        { id: 5, content: 'No mans Sky', rate: 75 },
+        { id: 6, content: 'Read Dead 2', rate: 70 },
+        { id: 7, content: 'The Witcher 3', rate: 95 },
+        { id: 8, content: 'PalWorld', rate: 66 },
+        { id: 9, content: 'Dead Cells', rate: 45 },
+        { id: 10, content: 'Balatro', rate: 12 },
+        { id: 11, content: 'Satisfactory', rate: 14 },
+        { id: 12, content: 'Enshrouded', rate: 25 },
+        { id: 13, content: 'Foxhole', rate: 10 }
+
       ]
     },
     { 

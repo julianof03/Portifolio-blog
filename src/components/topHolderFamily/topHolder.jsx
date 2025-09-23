@@ -4,17 +4,15 @@ function TopHolder({setSelectedTheme, topTheme, themeList, setTopTheme, selected
   const [isAnimating, setIsAnimating] = useState(false);
   
   const swtichThemeFunction = () => {
-    if (isAnimating) return; // Previne múltiplos cliques durante a animação
+    if (isAnimating) return; 
     
     setIsAnimating(true);
     
-    // Muda o texto quando a barra estiver totalmente expandida (0.5s)
     setTimeout(() => {
       setSelectedTheme(topTheme);
       setTopTheme(selectedTheme);
     }, 500);
     
-    // Para a animação após 2.5 segundos (duração total)
     setTimeout(() => {
       setIsAnimating(false);
     }, 2500);

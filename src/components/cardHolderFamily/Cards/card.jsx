@@ -9,7 +9,22 @@ function Card({selectedTheme ,setShowPopup, cardData, setPopUpdata}) {
     <>
       {cardData[selectedTheme].content.map(card => (
         <div key={card.id} className='Card' onClick={() => activePopup(card)}>
-          <p>{card.content}</p>
+          <div className='Pseudoimage'></div>
+
+          <div className='Rate'>
+            <div className='RateBar'>
+              <div className='RateBarFill' style={
+                { width: `${card.rate}%`, 
+                  top: `${((card.rate * 2) - 200)}px`
+                }}></div>
+            </div>
+            <h4>{card.content}</h4>
+            <p >{card.rate}%</p>
+            
+
+          </div>
+
+          
         </div>
       ))}
     </>
