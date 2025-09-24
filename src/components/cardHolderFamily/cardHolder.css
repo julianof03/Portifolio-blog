@@ -11,3 +11,8 @@
     justify-items: space-around;
     align-items: start;
 }
+h1{
+    position: absolute;
+    color: rgb(39, 39, 39);
+    top:15%;
+}

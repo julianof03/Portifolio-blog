@@ -9,6 +9,7 @@ function CardHolder({ selectedTheme, themeList }) {
 
   const cardData = [
     { 
+      name:"Jogos",
       content: [
         { id: 1, content: 'Minecraft', rate: 100 },
         { id: 2, content: 'Escape from tarkov', rate: 1 },
@@ -27,20 +28,26 @@ function CardHolder({ selectedTheme, themeList }) {
       ]
     },
     { 
-      content: [
-        { id: 1, content: 'Eu sou um card de filmes 01' },
-        { id: 2, content: 'Eu sou um card de filmes 02' }
+      name:"Filmes",
+       content: [
+        { id: 1, content: 'Minecraft', rate: 100 },
+        { id: 2, content: 'Escape from tarkov', rate: 67 },
       ]
     },{ 
+      name:"Series",
       content: [
-        { id: 1, content: 'Eu sou um card de series 01' },
-        { id: 2, content: 'Eu sou um card de series 02' }
+        { id: 1, content: 'Minecraft', rate: 100 },
+        { id: 2, content: 'Escape from tarkov', rate: 1 },
+        { id: 3, content: 'Rainbow Six X', rate: 85 },
       ]
     }
   ];
 
   return (
     <div className={`cardHolder ${themeList[selectedTheme].themeName}`}>
+      <h1>
+        {cardData[selectedTheme].name}
+      </h1>
       <Card 
         selectedTheme = {selectedTheme}
         setShowPopup ={setShowPopup}
