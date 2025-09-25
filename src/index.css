@@ -6,6 +6,7 @@
 .ContentHolder{
    width: 100%; 
    height: 100%;
+   overflow: visible; /* Garante que elementos filhos não sejam cortados */
 }
 body {
   min-height: 100vh;

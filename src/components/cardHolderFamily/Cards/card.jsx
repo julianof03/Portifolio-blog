@@ -8,7 +8,7 @@ function Card({selectedTheme ,setShowPopup, cardData, setPopUpdata}) {
   return (
     <>
       {cardData[selectedTheme].content.map(card => (
-        <div key={card.id} className='Card' onClick={() => activePopup(card)}>
+        <div key={card.id} className='Card' onClick={() => activePopup(card.id)}>
           <div className='Pseudoimage'></div>
 
           <div className='Rate'>

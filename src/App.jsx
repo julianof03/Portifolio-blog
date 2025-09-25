@@ -8,6 +8,7 @@ function App() {
   const [selectedTheme, setSelectedTheme] = useState(0);
   const [ topTheme, setTopTheme] = useState(1);
   const [ leftTheme, setLeftTheme] = useState(2);
+    const [showPopup, setShowPopup] = useState(false);
   const themeList = [{
     themeId: 0,
     themeName: 'Jogos'
@@ -28,18 +29,22 @@ function App() {
       <TopHolder 
         setSelectedTheme={setSelectedTheme}
         setTopTheme={setTopTheme}
+        setShowPopup={setShowPopup}
         topTheme={topTheme}
         themeList={themeList}
         selectedTheme={selectedTheme}
       />
       <LeftHolder 
         setSelectedTheme = {setSelectedTheme}
-        setLeftTheme = {setLeftTheme} 
+        setLeftTheme = {setLeftTheme}
+        setShowPopup = {setShowPopup}
         leftTheme = {leftTheme}
         themeList = {themeList}
         selectedTheme = {selectedTheme}
       ></LeftHolder>
       <CardHolder 
+        setShowPopup = {setShowPopup}
+        showPopup = {showPopup}
         selectedTheme = {selectedTheme}
         themeList = {themeList}
         ></CardHolder>

@@ -1,31 +1,28 @@
 .popUp {
-    position: fixed; /* mudado para fixed para melhor posicionamento */
+    position: fixed;
     width: 75%;
     height: 65%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 236, 236);
     color: rgb(17, 17, 17);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     
-    /* Centralizar */
     top: 50%;
     left: 50%;
+    z-index: 10000;
     
-    /* Estado inicial da animação */
     opacity: 0;
-    visibility: hidden;
-    transform: translate(-50%, -50%) scale(0.8);
-    
-    /* Transição suave para todas as propriedades */
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
+
     transition: 
-        opacity 0.3s ease,
-        visibility 0.3s ease,
-        transform 0.3s ease;
+        opacity 0.4s ease,
+        transform 0.4s ease;
 }
 
 .popUp.visible {
     opacity: 1;
-    visibility: visible;
+    pointer-events: all;
     transform: translate(-50%, -50%) scale(1);
 }
 button{
@@ -40,4 +37,101 @@ button{
     font-weight: bold;
     border: none;
     cursor: pointer;
+}
+
+.popUpContent{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.youtube{
+    position: absolute;
+    background-color: rgb(255, 42, 42);
+    top: 8%;
+    left: 5%;
+    width: 45%;
+    height: 45%;
+}
+.contentRate{
+    position: absolute;
+    background-color: blue;
+    top: 8%;
+    right: 5%;
+    width: 45%;
+    height: 45%;
+}
+h2{
+    position: absolute;
+    top: 54%;
+    left: 5%;
+    font-size: 28px;
+    font-weight: bold;
+}
+.tagHolder{
+    position: absolute;
+    bottom: 19%;
+    left: 5%;
+    width: 45%;
+    height: 20%;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+.tag{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.rate {
+    position: absolute;
+    color: rgb(236, 236, 236);
+    font-size: 22px;
+    font-weight: bold;
+    background-color: rgb(40, 211, 40);
+    top: 8%;
+    right: 35%;
+    width: 12%;
+    height: 10%;
+    border-radius: 3px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.reviewHolder{
+    position: absolute;
+    top: 20%;
+    right: 7%;
+    width: 40%;
+    height: 70%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    overflow-y: auto;
+}
+
+/* Estilização da scrollbar */
+.reviewHolder::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reviewHolder::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.reviewHolder::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.reviewHolder::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

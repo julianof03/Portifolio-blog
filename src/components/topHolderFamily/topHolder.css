@@ -6,8 +6,8 @@
     width: 100%;
     height: 70px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: height 0.3s ease;
     z-index: 100;
 }
@@ -16,7 +16,6 @@
     height: 150px;
 }
 
-/* Animação de expansão vertical */
 .topHolder.expanding {
     animation: expandDown 1.5s ease-in-out;
 }

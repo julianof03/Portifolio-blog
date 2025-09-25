@@ -1,14 +1,14 @@
 import './leftHolder.css';
 import React, { useState } from 'react'
-function LeftHolder({setSelectedTheme, setLeftTheme, leftTheme, themeList, selectedTheme}) {
+function LeftHolder({setSelectedTheme, setLeftTheme, leftTheme, themeList, selectedTheme, setShowPopup}) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const swtichThemeFunction = () => {
     if (isAnimating) return;
     
     setIsAnimating(true);
+    setShowPopup(false);
     
-    // Muda o texto quando a barra estiver totalmente expandida (0.5s)
     setTimeout(() => {
       setSelectedTheme(leftTheme);
       setLeftTheme(selectedTheme);

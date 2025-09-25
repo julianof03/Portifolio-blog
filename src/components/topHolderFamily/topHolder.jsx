@@ -1,13 +1,13 @@
 import './topHolder.css';
 import React, { useState } from 'react'
-function TopHolder({setSelectedTheme, topTheme, themeList, setTopTheme, selectedTheme}) {
+function TopHolder({setSelectedTheme, topTheme, themeList, setTopTheme, selectedTheme, setShowPopup}) {
   const [isAnimating, setIsAnimating] = useState(false);
   
   const swtichThemeFunction = () => {
     if (isAnimating) return; 
     
     setIsAnimating(true);
-    
+    setShowPopup(false);
     setTimeout(() => {
       setSelectedTheme(topTheme);
       setTopTheme(selectedTheme);
