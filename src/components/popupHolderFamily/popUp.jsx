@@ -12,7 +12,15 @@ function PopUp({showPopup, setShowPopup, popUpData, cardData, selectedTheme}) {
           <div className='popUpContent'>
             <div className='youtube'></div>
             <h2>{popUpList.content}</h2>
-            <div className="rate">{popUpList.rate}</div>
+            <div className="contentRate">
+              <div className="rate" 
+                style={{ 
+                  width: `${popUpList.rate}%`,
+                  top: `${((popUpList.rate * 8) - 800)}px`  
+              }}></div>
+              <p>{popUpList.rate}</p>
+            </div>
+            
             <div className="tagHolder">
               {popUpList.tags.map(tag => (
                   <div key={tag} className="tag"> {tag} </div>

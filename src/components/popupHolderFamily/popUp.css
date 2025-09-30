@@ -2,7 +2,7 @@
     position: fixed;
     width: 75%;
     height: 65%;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(233, 233, 233);
     color: rgb(17, 17, 17);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -52,14 +52,7 @@ button{
     width: 45%;
     height: 45%;
 }
-.contentRate{
-    position: absolute;
-    background-color: blue;
-    top: 8%;
-    right: 5%;
-    width: 45%;
-    height: 45%;
-}
+
 h2{
     position: absolute;
     top: 54%;
@@ -88,21 +81,29 @@ h2{
     border-radius: 3px;
     margin-right: 10px;
 }
-.rate {
+.contentRate{
     position: absolute;
-    color: rgb(236, 236, 236);
+    top: 8%;
+    right: 8.5%;
+    width: 38%;
+    height: 6%;
+    color: white;
+    font-size: 35px;
     font-size: 22px;
     font-weight: bold;
-    background-color: rgb(40, 211, 40);
-    top: 8%;
-    right: 35%;
-    width: 12%;
-    height: 10%;
-    border-radius: 3px;
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+    overflow: hidden;
+}
+.contentRate p{
+    position: absolute;
+    left: 5px;
+    text-shadow: 1px 1px 2px rgb(100, 100, 100);
+}
+.rate {
+    position: absolute;
+    background-image: linear-gradient(rgb(0, 194, 0), rgb(238, 255, 0), rgb(250, 27, 27));
+    height: 840px;
+    z-index: 0;
+
 }
 .reviewHolder{
     position: absolute;
